@@ -1,0 +1,7 @@
+cradle:
+  stack:
+    - path: "./src"
+      component: "practica2023:lib"
+
+    - path: "./test"
+      component: "practica2023:test:practica2023-test"
