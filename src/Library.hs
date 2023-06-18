@@ -78,3 +78,13 @@ socializar destino persona = (> cantidadDeAmigues persona) . cantidadDeAmigues .
 
 sinPretensiones :: Preferencia
 sinPretensiones destino persona = True
+
+-- Punto 5
+
+type Contingente = [Persona]
+
+destinoApto :: Destino -> Contingente -> Bool
+destinoApto destino = all $ preferencia destino
+
+preferencia :: Preferencia
+preferencia destino persona = (any (($ persona) . ($ destino)) . preferencias) persona
